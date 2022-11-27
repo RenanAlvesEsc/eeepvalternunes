@@ -1,0 +1,247 @@
+{% extends 'informatica/layout.html' %}
+{% load static %}
+
+
+{% block head %}
+<script src="{% static 'informatica/scripts/sobre_o_curso.js' %}"></script>
+<link rel="stylesheet" href="{% static 'informatica/styles/sobre_o_curso.css' %}">
+<title>Informática - EEEP Valter Nunes</title>
+{% endblock %}
+
+
+{% block body %}
+<main>
+    <section id="info-gerais">
+        <div class="text">
+            <h1 data-text="#Informática"><strong>#</strong>Informática</h1>
+            <p>O curso perfeito para aqueles que amam tecnologia.</p>
+        </div>
+        <img src="{% static 'informatica/images/infor-logo.png' %}" alt="Logo de Informática">
+    </section>
+    <section id="objetivo">
+        <h1>O <strong>Curso</strong></h1>
+        <article>
+            <div>
+                <p>O curso Técnico em Informática tem como objetivo desenvolver a capacidade e as habilidades do
+                    estudante, no que diz respeito ao aprendizado das tecnologias. Trazendo essa introdução de uma forma
+                    mais dinâmica, resumimos basicamente na aprendizagem de linguagens de programação, design gráfico,
+                    robótica educacional, manutenção de computadores, entre outras diversas disciplinas da nossa matriz
+                    curricular. Nosso curso é rico em atividades extracurriculares como por exemplo: o corujão, maratona
+                    da tecnologia, semana da informática.</p>
+                <p>No segundo semestre do 3° ano, nós temos o estágio
+                    supervisionado, mas o que seria isso? Estágio é um programa escolar remunerado que visa à preparação
+                    de estudantes para o mercado de trabalho e para suas futuras atividades profissionais. </p>
+
+                <img class="galery-image" src="{% static 'informatica/images/informatica_todos.jpeg' %}" alt="Foto">
+            </div>
+            <div>
+                <p>O estágio,
+                    tem o objetivo a afirmação da aprendizagem do estagiário, como processo pedagógico de construção de
+                    conhecimentos, desenvolvimento de competências e habilidades sob processo de supervisão.</p>
+                <p>Mas e o
+                    mercado de trabalho na área da tecnologia? Nossa sociedade está cada vez mais dependente da
+                    tecnologia, seguindo esse contexto, é muito comum que as pessoas usem aplicativos para se comunicar
+                    e realizar tarefas cotidianas. Em função disso, a área de TI tem se expandido em todos os
+                    departamentos do mundo, crescendo até mesmo em momentos de crise, não é atoa que existe uma enorme
+                    procura por profissionais qualificados. No geral, as empresas públicas, ou privadas, oferecem boas
+                    oportunidades de emprego e salário atrativos. Os setores dos profissionais, são os mais distintos,
+                    eles podem atuar em diferentes locais, indo da área financeira até o ramo da saúde, além de empresas
+                    especializadas na área da própria tecnologia.</p>
+                <span>
+                    <img class="galery-image" src="{% static 'informatica/images/corujao_segundoano.jpeg' %}"
+                        alt="Foto">
+                    <img class="galery-image" src="{% static 'informatica/images/desfile_civico.jpg' %}" alt="Foto">
+                </span>
+
+            </div>
+        </article>
+    </section>
+    <section id="eventos">
+        <h1>Eventos</h1>
+        <div class="events-info">
+            <div class="swiper events-index">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="{% static 'informatica/images/corujao_yago.jpeg' %}" alt="Foto">
+                        <div class="slide-content">
+                            <div class="info event-information">
+                                <h1>Corujão</h1>
+                                <div class="event-text-container">
+                                    <p class="event-text"> O Corujão é um evento dedicado aos alunos do curso técnico em
+                                        informática, em
+                                        virtude do dia do estudante, que acontece no mês de Agosto. A solenidade que já
+                                        conta com 4 edições, é organizado pelos alunos do 2° ano, juntamente com o PCC
+                                        (Professor Coordenador de Curso), Luís Lourenço. No ano de 2022, foi realizada 4°
+                                        edição do corujão, que contou com participação dos discentes de 1°, 2° e 3° série do
+                                        curso técnico em informática como também, a honra de receber alguns dos alunos do
+                                        curso técnico em informática da E.E.E.P. Presidente Médici, juntamente com os
+                                        Diretores de Turmas. Está comemoração foi bastante esperada por todos, tendo em
+                                        vista que, foram dois anos sem que pudessem promover o referido evento. A
+                                        programação contava com brincadeiras, dinâmicas, balada, cinema e bingo. Em uma das
+                                        dinâmicas da noite, mais precisamente na gincana, a turma do 2° ano foi campeã, onde
+                                        receberá um prêmio no qual será um dia de lazer no parque Aquático Caldas, na cidade
+                                        de Barbalha-Ceará.
+                                    </p>
+                                </div>
+                                <button class="event-btn">Leia Sobre</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'informatica/images/maratona_de_ti.jpeg' %}" alt="Foto">
+                        <div class="slide-content">
+                            <div class="info event-information">
+                                <h1>Maratona de Tecnologia</h1>
+                                <div class="event-text-container">
+                                    <p class="event-text">A maratona da tecnologia é produzida e organizada pela turma de
+                                        terceiro ano, promovida para finalização das matérias da base técnica, ou seja, para
+                                        conclusão as disciplinas da grade do curso, a fim de prepará-los para o início do
+                                        estágio, que ocorre no segundo semestre do ano letivo. O evento que já conta com
+                                        oito edições, sendo está realizada nos dias 17 e 18 de maio de 2022, produzida pelos
+                                        alunos da turma de 2020-2022. O acontecimento traz uma programação repleta de
+                                        palestras e oficinas, abordando temas inovadores e da atualidade, como por exemplo:
+                                        as palestras "5G, A nova era”, a "LGPD: migalhas de proteção de dados: o mito do
+                                        consentimento". Voltando para a parte das oficinas, temos como exemplos: "Revivendo
+                                        um clássico com Phyton!" e "Quer filtro? Recebaa!" tendo como público-alvo os alunos
+                                        do curso técnico em informática, das turmas de primeiro, segundo e terceiro ano.
+                                    </p>
+                                </div>
+                                <button class="event-btn">Leia Sobre</button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'informatica/images/fabrica_de_robos.jpg' %}" alt="Foto">
+                        <div class="slide-content">
+                            <div class="info event-information">
+                                <h1>Fábrica de Robôs </h1>
+                                <div class="event-text-container">
+                                    <p class="event-text">A fábrica de robôs é o mais novo evento do curso de Informática.
+                                        Criada no ano de 2022 e realizada pelos alunos do Segundo ano (turma de 2021-2023),
+                                        com o intuito de colocar em prática os conteúdos vistos na disciplina de Noções de
+                                        Robótica, além disso, os projetos da Fábrica de Robôs foram escolhidos baseados em
+                                        problemas sociais, da atualidade. O evento contou com a culminância de 7 projetos,
+                                        todos desenvolvidos durante a disciplina de Robótica, com apresentações para os
+                                        alunos da instituição, promovendo uma interação dos diferentes cursos, este ocorreu
+                                        no dia 15 de Junho de 2022, oportunizando assim, que os outros cursos conheçam um
+                                        pouco mais sobre as nossas disciplinas da base técnica. Para finalização do evento,
+                                        foi divulgado o projeto vencedor, no qual era nomeado: "Cyclope: o óculos
+                                        anti-sono", que tinha o intuito de emitir um sinal sonoro, quando detectasse sinais
+                                        de sonolência, foi desenvolvido pelos alunos Ana Jennifer, Ana Sofia, Ana Vitória,
+                                        Bernardo Paulino e Héryclles Adriell, onde foram premiados com medalhas.
+                                    </p>
+                                </div>
+                                <button class="event-btn">Leia Sobre</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+    <section id="disciplinas">
+        <h1><strong>Disciplinas</strong> do curso</h1>
+        <div class="skill-boxes">
+            <div class="box">
+                <span>
+                    <i class="mdi mdi-desktop-classic"></i>
+                </span>
+                <div class="box-text">
+                    <h1>Informática Básica</h1>
+                    <p>Os conceitos mais fundamentais - história, ferramentas de escritório, etc.</p>
+                </div>
+            </div>
+            <div class="box">
+                <span>
+                    <i class="mdi mdi-cpu-64-bit"></i>
+                </span>
+                <div class="box-text">
+                    <h1>Arquitetura e Manutenção</h1>
+                    <p>A estrutura, montagem e resoluçao dos problemas de computadores.</p>
+                </div>
+            </div>
+            <div class="box">
+                <span>
+                    <i class="mdi mdi-language-html5"></i>
+                </span>
+                <div class="box-text">
+                    <h1>HTML5 & CSS3</h1>
+                    <p>As linguagens básicas do consórcio World Wide Web (WWW).</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <span>
+                    <i class="mdi mdi-apple"></i>
+                </span>
+                <div class="box-text">
+                    <h1>Sistemas Operacionais</h1>
+                    <p>Android, Windows, MacOS, iOS...</p>
+                </div>
+            </div>
+            <div class="box">
+                <span>
+                    <i class="mdi mdi-webpack"></i>
+                </span>
+                <div class="box-text">
+                    <h1>P.O.O</h1>
+                    <p>A programação que baseia-se nos objetos reais.</p>
+                </div>
+            </div>
+            <div class="box">
+                <span>
+                    <i class="mdi mdi-code-json"></i>
+                </span>
+                <div class="box-text">
+                    <h1>Programação Web</h1>
+                    <p>Criação e desenvolvimento de sites responsivos com tecnologias avançadas.</p>
+                </div>
+            </div>
+            <div class="box">
+                <span>
+                    <i class="mdi mdi-database-cog"></i>
+                </span>
+                <div class="box-text">
+                    <h1>Banco de Dados</h1>
+                    <p>O conceito e seu sistema de gerenciamento.</p>
+                </div>
+            </div>
+            <div class="box">
+                <span>
+                    <i class="mdi mdi-web-check"></i>
+                </span>
+                <div class="box-text">
+                    <h1>Redes de Computadores</h1>
+                    <p>O funcionamento da ditosa internet.</p>
+                </div>
+            </div>
+            <div class="box">
+                <span>
+                    <i class="mdi mdi-robot-industrial-outline"></i>
+                </span>
+                <div class="box-text">
+                    <h1>Robótica</h1>
+                    <p>O ramo tecnológico que trata da mecânica e da automação</p>
+                </div>
+            </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block js %}
+<script>
+    $('.event-information').each(function () {
+        var btn = $(this).find('.event-btn');
+        var text = $(this).find('.event-text-container');
+        btn.on('click', function () {
+            text.toggleClass('visible');
+        })
+    })
+</script>
+{% endblock %}
+
+</html>

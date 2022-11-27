@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  box-shadow: none;
+  font-family: "Mulish";
+  scroll-behavior: smooth;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 84px;
+  padding: 0 96px;
+  top: 0;
+  position: sticky;
+  transition: 200ms;
+  z-index: 99999999;
+}
+nav.scrolled-down {
+  background: #141a22;
+}
+nav .logo {
+  font-size: 22px;
+  color: #f9fafd;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 200ms;
+  display: flex;
+  align-items: center;
+}
+nav img {
+  width: 56px;
+  margin-right: 12px;
+}
+nav h1 {
+  font-size: 22px;
+}
+nav h1 strong {
+  color: #ffd45d;
+}
+nav .nav-list {
+  margin-left: auto;
+}
+nav .nav-item {
+  font-size: 16px;
+  color: #f9fafd;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 200ms;
+  padding: 4px 8px;
+  font-weight: 400;
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+}
+nav .nav-item:hover {
+  border-bottom: 2px solid #ffd45d;
+}
+
+footer {
+  background-color: #141a22;
+  padding: 32px 64px;
+}
+footer .references {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #454d57;
+  padding-bottom: 16px;
+  margin-bottom: 32px;
+}
+footer .navigation {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+footer .navigation a {
+  font-size: 16px;
+  color: #f9fafd;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 200ms;
+  margin: 0 8px;
+}
+footer .navigation img {
+  width: 56px;
+  height: 56px;
+  margin-right: 16px;
+}
+footer .social {
+  display: flex;
+}
+footer .social a {
+  font-size: 26px;
+  color: #ffd45d;
+  margin: 0 8px;
+}
+footer .information {
+  color: #f9fafd;
+  font-size: 14px;
+}
+footer .information p {
+  margin-bottom: 4px;
+}
+
+nav {
+  background-color: #141a22;
+}
+nav .nav-item.item-restrito {
+  color: #ffd45d;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 84px);
+}
+main h1 {
+  font-size: 42px;
+}
+main p {
+  font-size: 20px;
+  margin-bottom: 32px;
+}
+main form {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  background-color: #edf0f3;
+  border: 2px solid #c2c6ca;
+  padding: 20px;
+  border-radius: 12px;
+  color: #080b0f;
+  box-shadow: 0 0 20px #919499;
+}
+main form label {
+  font-size: 15px;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+main form input {
+  height: 36px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  height: 40px;
+  border: 2px solid #c2c6ca;
+  padding: 0 6px;
+  outline: none;
+}
+main form input:nth-last-child(1) {
+  color: #f9fafd;
+  background-color: #0044a3;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 200ms;
+  color: #f9fafd;
+  font-size: 16px;
+  margin-bottom: 0;
+  border-radius: 6px;
+  font-weight: 600;
+}
+main form input:nth-last-child(1):hover {
+  background-color: #043880;
+}
+main form input:focus {
+  background-color: #b1d2ff;
+  border: 2px solid #166be0;
+}
+
+/*# sourceMappingURL=restrito.css.map */

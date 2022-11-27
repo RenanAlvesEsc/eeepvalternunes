@@ -1,0 +1,139 @@
+{% extends 'informatica/layout.html' %}
+{% load static %}
+
+{% block head %}
+<script src="{% static 'informatica/scripts/index.js' %}"></script>
+<link rel="stylesheet" href="{% static 'informatica/styles/index.css' %}">
+<title> Informática - EEEP Valter Nunes de Alencar </title>
+{% endblock %}
+
+{% block top_header %}
+<header>
+    <span class="social">
+        <a target="_blank" href="https://www.facebook.com/inforedes.eeepvna/"><i class="mdi mdi-facebook"></i></a>
+        <a target="_blank" href="https://www.instagram.com/informatica.eeepvalter/"><i class="mdi mdi-instagram"></i></a>
+        <a target="_blank" href="https://github.com/informatica-eeepvna/"><i class="mdi mdi-github"></i></a>
+        <a href="#"><i class="mdi mdi-youtube"></i></a>
+        <div class="refs">
+            <a href="#">Site EEEP Valter Nunes</a>
+        </div>
+    </span>
+</header>
+{% endblock %}
+
+{% block body %}
+<main>
+    <section id="inicio">
+        <div class="home-carousel swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="slide-image" src="{% static 'informatica/images/inforarte.png' %}" alt="Imagem do curso">
+                    <div class="slide-content">
+                        <h1>Informática - EEEP Valter Nunes de Alencar</h1>
+                        <p>Seja bem vindo ao curso de Informática da EEEP Valter Nunes de Alencar! Aqui você encontrará
+                            as informações atualizadas e definições do que este curso tem a lhe oferecer e ajudar na preparação para este imenso
+                            mercado de trabalho no ramo da tecnologia.</p>
+                            <a href="{% url 'informatica:sobre_o_curso' %}">Saiba Mais</a>
+                        </div>
+                    </div>
+                {% if slides %}
+                {% for slide in slides %}
+                <div class="swiper-slide">
+                    <img class="slide-image" src="{{ slide.image.url }}" alt="slide.image | safe">
+                    <div class="slide-content">
+                        <h1>{{ slide.title }}</h1>
+                        <p>{{ slide.text }}</p>
+                        <a href="{% url 'informatica:noticia' slide.noticia.id %}">Saiba Mais</a>
+                    </div>
+                </div>
+                {% endfor %}
+                {% endif %}
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+    <section id="principais-noticias">
+        <div class="news-info">
+            <form method="get" class="search-news">
+                <input type="text" id="news-querry" name="news-querry"
+                    placeholder="Pesquise algo sobre o curso: notícias, eventos, etc.">
+                <input type="submit" id="submit-news-querry" value="Pesquisar">
+            </form>
+            <h1>Notícias recentes</h1>
+            <div class="swiper news-carousel">
+                <span class="navigation">
+                    <span class="swiper-buttons">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </span>
+                    <span class="filters-container">
+                        <form id="filters-form" action="{% url 'informatica:index' %}" method="get">
+                            <select name="filter" class="filters">
+                                <option value="Todas" class="filter-option">Todas</option>
+                                {% for filter in categorias %}
+                                    <option value="{{filter}}" class="filter-option">{{filter}}</option>
+                                {% endfor %}
+                            </select>
+                            <input type="submit" value="Filtrar" class="submit-filter">
+                        </form>
+                    </span>
+                </span>
+                <div class="swiper-wrapper news-slide-wrapper">
+                    {% if noticias_recentes %}
+                    {% for noticia in noticias_recentes %}
+                    <a href="{% url 'informatica:noticia' noticia.id %}" class="swiper-slide news-slide {{noticia.notice_category}}">
+                        <img class="slide-image" src="{{ noticia.main_image.url }}"
+                            alt="{{ noticia.main_image.url | safe }}">
+                        <div class="slide-content">
+                            <div class="info">
+                                <div class="data">
+                                    <p>{{ noticia.author }}</p>
+                                    <span class="tags">
+                                        <p class="tag-{{noticia.notice_category}}">{{ noticia.notice_category }}</p>
+                                    </span>
+                                </div>
+                                <h1>{{ noticia.title }}</h1>
+                                <p>{{ noticia.publish_date }}</p>
+                            </div>
+                        </div>
+                    </a>
+                    {% endfor %}
+                    {% else %}
+                    <div class="swiper-slide none news-slide">
+                        <h1>Não há notícias recentes desse tema.</h1>
+                        <a href="{% url 'informatica:noticias' %}">Acesse todas as notícias <i class="mdi mdi-arrow-right-thin"></i></a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            <a href="{% url 'informatica:noticias' %}">Mais notícias</a>
+    </section>
+    <section id="sobre-o-curso">
+        <div class="geral-info">
+            <div class="monitor">
+                <iframe src="https://www.youtube.com/embed/tW4QhnP_7pI" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div class="suporte"></div>
+                <div class="base"></div>
+            </div>
+            <article>
+                <h1>Sobre o curso</h1>
+                <p>O curso técnico em informática da EEEP Valter Nunes de Alencar conta com uma excelente grade curricular e profissionais altamente qualificados
+                    para o ensino e preparo no grande marcado de trabalho e mundo da tecnologia.
+                    O curso conta com diversos eventos exclusivos, os quais são muito bem preparados e programados para os alunos do curso, o que torna o curso ainda mais atrativo e qualificado em todos os sentidos.
+                </p>
+                <p>Neste vídeo ao lado você pode observar e apreciar a cobertura do Corujão da Informática 4.0, que mostra as principais atrações do evento e sua realização.</p>
+                <a href="{% url 'informatica:sobre_o_curso' %}">Saiba mais</a>
+            </article>
+        </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block js %}
+{% endblock %}
+
+</html>

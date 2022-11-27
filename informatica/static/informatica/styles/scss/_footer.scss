@@ -1,0 +1,138 @@
+@use './config' as *;
+
+footer {
+    background-color: $dark-gray;
+    padding: 32px 64px;
+
+    .references {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid $dark-gray-2;
+        padding-bottom: 16px;
+        margin-bottom: 32px;
+    }
+    .navigation {
+        display: flex;
+        align-items: center;
+        margin-right: auto;
+        a {
+            @include linkStyle(16px, $white);
+            margin: 0 8px;
+        }
+        img {
+            width: 56px;
+            height: 56px;
+            margin-right: 16px;
+        }
+    }
+    .social {
+        display: flex;
+
+        a {
+            font-size: 26px;
+            color: $yellow;
+            margin: 0 8px;
+        }
+    }
+    .information {
+        color: $white;
+        font-size: 14px;
+        p {
+            margin-bottom: 4px;
+        }
+    }
+}
+@media screen and (max-width: $mobile-lg) {
+    footer {
+        background-color: $dark-gray;
+        padding: 26px 16px;
+    
+        .references {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid $dark-gray-2;
+            padding-bottom: 16px;
+            margin-bottom: 32px;
+        }
+        .navigation {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            a {
+                @include linkStyle(16px, $white);
+                padding: 8px 0;
+            }
+            img {
+                width: 56px;
+                height: 56px;
+                margin-bottom: 16px;
+            }
+        }
+        .social {
+            display: flex;
+    
+            a {
+                font-size: 26px;
+                color: $yellow;
+                margin: 0 8px;
+            }
+        }
+        .information {
+            color: $white;
+            font-size: 14px;
+            p {
+                margin-bottom: 4px;
+            }
+        }
+    }
+}
+@media screen and (max-width: $mobile-sm) {
+    footer {
+        background-color: $dark-gray;
+        padding: 26px 8px;
+    
+        .references {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid $dark-gray-2;
+            padding-bottom: 16px;
+            margin-bottom: 32px;
+        }
+        .navigation {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            a {
+                @include linkStyle(14px, $white);
+                padding: 8px 0;
+            }
+            img {
+                width: 56px;
+                height: 56px;
+                margin-bottom: 16px;
+            }
+        }
+        .social {
+            display: flex;
+            flex-wrap: wrap;
+    
+            a {
+                font-size: 26px;
+                color: $yellow;
+                margin: 0 8px;
+            }
+        }
+        .information {
+            color: $white;
+            font-size: 14px;
+            p {
+                margin-bottom: 4px;
+            }
+        }
+    }
+}

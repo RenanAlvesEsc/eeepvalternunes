@@ -1,0 +1,144 @@
+//----Fonts----
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    //font-family: 'Noto Sans', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+    //font-family: 'Mulish', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    //font-family: 'Roboto Slab', serif;
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+    //font-family: 'Fira Code', monospace;
+//----Colors----
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-shadow: none;
+    font-family: 'Mulish';
+    scroll-behavior: smooth;
+}
+
+$desktop-lg: 1536px;
+$desktop-md: 1366px;
+$desktop-sm: 960px;
+$tablet-md: 768px;
+$mobile-lg: 428px;
+$mobile-md: 385px;
+$mobile-sm: 320px;
+
+
+$blue: #0044a3;
+$blue-2: #166be0;
+$light-blue: #b1d2ff;
+$dark-blue: #043880;
+$darkest-blue: #032350;
+
+$yellow: #ffd45d;
+$light-yellow: #fff0c2;
+$dark-yellow: #a18538;
+
+
+$red: #cc3b31;
+$light-red: #ffc8c4;
+$dark-red: #642523;
+
+$green: #236e4b;
+$light-green: #b2fad0;
+$dark-green: #12442d;
+
+$purple: #be48d6;
+$light-purple: #ee99ff;
+$dark-purple: #762c85;
+
+$orange: #f58652;
+$light-orange: #ffceb7;
+$dark-orange: #8b4727;
+
+
+$gray: #61666b;
+$gray-2: #919499;
+$gray-blue: #202630;
+$light-gray: #c2c6ca;
+$light-gray-2: #edf0f3;
+$dark-gray: #141a22;
+$dark-gray-2: #454d57;
+$dark-gray-3: #2c3036;
+$darkest-gray: #0c0f14;
+$black: #080b0f;
+
+$black-a75: rgba(8, 11, 15, 0.75);
+$black-a90: rgba(8, 11, 15, 0.75);
+$white: #f9fafd;
+
+
+//Mixins
+
+@mixin buttonStyle(
+    $color: $white,
+    $bgColor:transparent, 
+    $bgColorHover:transparent
+) {
+    color: $color;
+    background-color: $bgColor;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 200ms;
+
+    &:hover {
+        background-color: $bgColorHover;
+    }
+}
+
+@mixin linkStyle(
+    $fontSize: 16px,
+    $color: $white
+) {
+    font-size: $fontSize;
+    color: $color;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 200ms;
+}
+@mixin titleStyle($borderColor: $blue) {
+    font-size: 32px;
+    padding-left: 8px;
+    border-left: 4px solid $blue;
+    font-weight: 800;
+}
+@mixin emphasisStyle($color: $blue) {
+    color: $color;
+    position: relative;
+    width: fit-content;
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 4px;
+        position: absolute;
+        background: $color;
+        bottom: -2px;
+        left: 0;
+    }
+}
+@mixin emphasisStyleGradient($bg: linear-gradient(35deg, $blue, $yellow)) {
+    background: $bg;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    font-weight: 800;
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 4px;
+        position: absolute;
+        background: $bg;
+        bottom: -2px;
+        left: 0;
+    }
+}

@@ -1,0 +1,77 @@
+{% extends 'informatica/layout.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'informatica/styles/noticias.css' %}">
+<title>Notícias</title>
+{% endblock %}
+
+{% block body %}
+<div id="main-content">
+    <main>
+        <section id="noticias">
+            {% for noticia in noticias %}
+            <article class="notice">
+                <a href="{% url 'informatica:noticia' noticia.id %}" class="notice-link">
+                    <div class="notice-image-container">
+                        <img class="notice-image" src="{{ noticia.main_image.url }}" alt="Asdf">
+                    </div>
+                    <div class="notice-info">
+                        <div class="info-content">
+                            <div class="data">
+                                <p>{{ noticia.publish_date }}</p>
+                                <h1>{{ noticia.title }}</h1>
+                                <h2>{{ noticia.subtitle }}</h2>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            {% endfor %}
+        </section>
+    </main>
+    <aside>
+        <section id="indice-noticias">
+            <div class="recente">
+                <h1>Recente</h1>
+                <article>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/tW4QhnP_7pI"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </article>
+            </div>
+            <div class="social">
+                <h1>Redes Sociais</h1>
+                <article class="social-icons">
+                    <a href="#"><i class="mdi mdi-facebook"></i></a>
+                    <a href="#"><i class="mdi mdi-instagram"></i></a>
+                    <a href="#"><i class="mdi mdi-github"></i></a>
+                    <a href="#"><i class="mdi mdi-youtube"></i></a>
+                </article>
+            </div>
+            <div id="mais-vistas">
+                <h1>Mais Vistas</h1>
+                <div class="notices-list">
+                    {% for noticia in noticias_recentes %}
+                    <article class="notices-list-notice">
+                        <a href="{% url 'informatica:noticia' noticia.id %}">
+                            <img src="{{ noticia.main_image.url }}" alt="{{ noticia.main_image.url | safe }}">
+                            <div class="notice-info">
+                                <p>{{ noticia.publish_date }}</p>
+                                <h1>{{ noticia.title }}</h1>
+                                <h2>{{ noticia.subtitle }}</h2>
+                            </div>
+                        </a>
+                    </article>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </aside>
+</div>
+{% endblock %}
+
+</body>
+
+</html>

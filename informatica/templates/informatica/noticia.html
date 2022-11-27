@@ -1,0 +1,59 @@
+{% extends 'informatica/layout.html' %}
+{% load static %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'informatica/styles/noticia.css' %}">
+    <title>Criação do site do curso de informática | Informatica - EEEP VNA</title>
+{% endblock %}
+
+
+{% block body %}
+<div id="content-box">
+    <main>
+        <section id="notice-head">
+            <h1>{{ noticia.title | safe }}</h1>
+            <p>{{ noticia.subtitle }}</p>
+            <img src="{{ noticia.main_image.url }}" alt="{{noticia.main_image | safe}}">
+            <div>
+                <div class="metadata">
+                    <p><i class="mdi mdi-clock-outline"></i>{{ noticia.publish_date }}</p>
+                    <em class="author">{{ noticia.author }}</em>
+                </div>
+                <span class="social">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </span>
+            </div>
+        </section>
+        <section id="notice-body">
+            <article>
+                {{ noticia.content | safe }}
+            </article>
+        </section>
+    </main>
+    <aside>
+        <section id="indice-noticias">
+            <div id="mais-vistas">
+                <h1>Notícias mais Vistas</h1>
+                <div class="notices-list">
+                {% for noticia in noticias_recentes %}
+                <article class="notices-list-notice">
+                    <a href="{% url 'informatica:noticia' noticia.id %}">
+                        <img src="{{ noticia.main_image.url }}" alt="{{ noticia.main_image.url | safe }}">
+                        <div class="notice-info">
+                            <h1>{{ noticia.title }}</h1>
+                            <p>{{ noticia.subtitle }}</p>
+                        </div>
+                    </a>
+                </article>
+                {% endfor %}
+                </div>
+            </div>
+        </section>
+    </aside>
+</div>
+{% endblock %}
+</html>

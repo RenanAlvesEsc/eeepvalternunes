@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Victor Renan Alves de Oliveira">
+    <!--Dependencias-->
+    <script src="{% static 'informatica/libraries/Jquery-3.6/jquery-3.6.1.js' %}"></script>
+    <script src="{% static 'informatica/libraries/Swiper-8.4/swiper-bundle.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'informatica/libraries/Swiper-8.4/swiper-bundle.min.css' %}">
+    <link rel="icon" href="{% static 'informatica/images/infor-logo.png' %}">
+    <link rel="stylesheet" href="{% static 'informatica/libraries/MaterialDesignIcons-6.9/css/materialdesignicons.min.css' %}">
+    <!--Css e JS-->
+    <script src="{% static 'informatica/scripts/menu.js' %}"></script>
+
+    {% block head %}
+    {% endblock %}
+
+</head>
+
+<body>
+
+    {% block top_header %}
+    {% endblock %}
+
+    <nav id="nav-bar">
+        <a class="logo" href="{% url 'informatica:index' %}">
+            <img src="{% static 'informatica/images/infor-logo.png' %}" alt="Logo de Informática">
+            <h1><strong>#</strong>Informática</h1>
+        </a>
+        <i class="mdi mdi-menu menu"></i>
+        <span class="nav-list">
+            <a class="nav-item item-index" href="{% url 'informatica:index' %}">Home</a>
+            <a class="nav-item item-sobre-o-curso" href="{% url 'informatica:sobre_o_curso' %}">Sobre o curso</a>
+            <a class="nav-item" href="{% url 'base:index' %}">Sobre a escola</a>
+            <a class="nav-item item-noticias" href="{% url 'informatica:noticias' %}">Notícias</a>
+            <a class="nav-item"href="{% url 'admin:index' %}">Acesso restrito</a>
+        </span>
+    </nav>
+
+    {% block body %}
+    {% endblock %}
+
+    <footer>
+        <div class="references">
+            <span class="navigation">
+                <img src="{% static 'informatica/images/infor-logo.png' %}" alt="Logo de Informática">
+                <a class="nav-item" href="{% url 'informatica:index' %}">Home</a>
+                <a class="nav-item" href="{% url 'informatica:sobre_o_curso' %}">Sobre o curso</a>
+                <a class="nav-item" href="{% url 'base:index' %}">Sobre a escola</a>
+                <a class="nav-item" href="{% url 'informatica:noticias' %}">Notícias</a>
+                <a class="nav-item"href="{% url 'admin:index' %}">Acesso restrito</a>
+            </span>
+            <span class="social">
+                <a href="#"><i class="mdi mdi-facebook"></i></a>
+                <a href="#"><i class="mdi mdi-instagram"></i></a>
+                <a href="#"><i class="mdi mdi-github"></i></a>
+                <a href="#"><i class="mdi mdi-youtube"></i></a>
+            </span>
+        </div>
+        <div class="information">
+            <p>&copy;2022 - EEEP Valter Nunes de Alencar, Curso de Informática</p>
+            <p><strong>Professor Coordenador de Curso:</strong> Luis Lourenço de Oliveira Filho</p>
+            <p><strong>Programador:</strong> Victor Renan Alves de Oliveira</p>
+            <p><strong>Colunistas:</strong> Ana V. Castro & Ramon M. Alves</p>
+            <p>emaildocurso@gmail.com</p>
+        </div>
+    </footer>
+    {% block js %}
+    {% endblock %}
+</body>
+
+</html>
