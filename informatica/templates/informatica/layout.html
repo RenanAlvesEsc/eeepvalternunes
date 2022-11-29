@@ -28,7 +28,7 @@
     {% endblock %}
 
     <nav id="nav-bar">
-        <a class="logo" href="{% url 'informatica:index' %}">
+	    <a class="logo" href="{% url 'informatica:index' %}">
             <img src="{% static 'informatica/images/infor-logo.png' %}" alt="Logo de Informática">
             <h1><strong>#</strong>Informática</h1>
         </a>
@@ -36,9 +36,9 @@
         <span class="nav-list">
             <a class="nav-item item-index" href="{% url 'informatica:index' %}">Home</a>
             <a class="nav-item item-sobre-o-curso" href="{% url 'informatica:sobre_o_curso' %}">Sobre o curso</a>
-            <a class="nav-item" href="{% url 'base:index' %}">Sobre a escola</a>
+            <a class="nav-item" href="javascript:void(0);">Sobre a escola</a>
             <a class="nav-item item-noticias" href="{% url 'informatica:noticias' %}">Notícias</a>
-            <a class="nav-item"href="{% url 'admin:index' %}">Acesso restrito</a>
+            <a class="nav-item" href="{% url 'admin:index' %}">Acesso restrito</a>
         </span>
     </nav>
 
@@ -51,7 +51,7 @@
                 <img src="{% static 'informatica/images/infor-logo.png' %}" alt="Logo de Informática">
                 <a class="nav-item" href="{% url 'informatica:index' %}">Home</a>
                 <a class="nav-item" href="{% url 'informatica:sobre_o_curso' %}">Sobre o curso</a>
-                <a class="nav-item" href="{% url 'base:index' %}">Sobre a escola</a>
+                <a class="nav-item" href="javascript:void(0);">Sobre a escola</a>
                 <a class="nav-item" href="{% url 'informatica:noticias' %}">Notícias</a>
                 <a class="nav-item"href="{% url 'admin:index' %}">Acesso restrito</a>
             </span>
@@ -67,7 +67,7 @@
             <p><strong>Professor Coordenador de Curso:</strong> Luis Lourenço de Oliveira Filho</p>
             <p><strong>Programador:</strong> Victor Renan Alves de Oliveira</p>
             <p><strong>Colunistas:</strong> Ana V. Castro & Ramon M. Alves</p>
-            <p>emaildocurso@gmail.com</p>
+            <p>informatica.eeepvna@gmail.com</p>
         </div>
     </footer>
     {% block js %}
